@@ -5,7 +5,7 @@ export const Storecontext = createContext(null);
 const Storecontextprovider = (props)=>{
 
     const [cartitems,setcartitems] = useState({});
-    const url = "http://localhost:4000";
+    const url = "https://food-api-xi.vercel.app/";
     const [token,setToken] = useState("");
     const [food_list,setFoodlist] = useState([]);
 
