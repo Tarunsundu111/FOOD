@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
-import { Route, Router, Routes } from 'react-router-dom'
+import { Route,  Routes } from 'react-router-dom'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Cart from './pages/Cart/Cart'
 import Home from './pages/Home/Home'
@@ -13,7 +13,7 @@ const App = () => {
   const [showLogin,setShowLogin] = useState(false)
   return (
     <>
-    {showLogin ? <Loginpopup setShowLogin={setShowLogin}/>:<></>}
+    {showLogin && <Loginpopup setShowLogin={setShowLogin}/>}
     <div className='App'>
       <Navbar setShowLogin={setShowLogin} />
       <Routes>
